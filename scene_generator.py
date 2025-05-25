@@ -74,9 +74,6 @@ class SceneGenerator:
         prompt = f"""
         Generate a detailed scene for an advertisement storyboard based on the provided information.
         
-        {priority_instructions}
-        
-        {format_instructions}
         
         Ad Details:
         - Product Name: {ad_details.product_name}
@@ -97,6 +94,11 @@ class SceneGenerator:
         - Scene Goal: {input_scene.scene_goal or "Not specified"}
         - User Recommendations: {input_scene.user_recommendation or "Not specified (follow normal generation)"}
         
+        {priority_instructions}
+
+        this is the format isntructions
+        {format_instructions}
+
         Generation Rules:
         1. IF USER RECOMMENDATIONS EXIST:
         - Implement them EXACTLY as written
@@ -228,6 +230,8 @@ class SceneGenerator:
         - Visuals: {scene.visuals}
         - Camera Work: {scene.camera_work}
         
+        {priority_instructions}
+
         STRICT RULES:
         1. NEVER merge categories - keep CHARACTERS/ACTION/ENVIRONMENT/STYLE strictly separated
         2. The prompt must describe a SINGLE frozen moment (no sequential actions)
@@ -347,7 +351,7 @@ class SceneGenerator:
 
         ---
         
-        {priority_instructions}
+        
         
         BASE SCENE DETAILS:
         - Characters: {scene.characters}
@@ -362,6 +366,7 @@ class SceneGenerator:
         - Environment: {txt2img_prompt.environment_location}, {txt2img_prompt.environment_lighting}
         - Style: {txt2img_prompt.style_type}, {txt2img_prompt.style_technique}
         
+        {priority_instructions}
         WAN2.1 STRICT RULES:
         1. Time ALL actions (e.g. "1.2s sword draw from scabbard")
         2. Specify hair/cloth physics (e.g. "left pigtail swings 30° right on impact")
