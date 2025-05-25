@@ -330,8 +330,8 @@ def create_gradio_interface():
                     )
                     all_images.seek(0)
 
-                print(imagePrompt)
-                print(vidPrompt)
+                # print(imagePrompt)
+                # print(vidPrompt)
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
 
