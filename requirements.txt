@@ -1,0 +1,8 @@
+pillow==11.2.1
+pydantic==2.11.5
+typing_extensions==4.13.2
+google-generativeai==0.8.5
+langchain==0.3.25
+replicate==1.0.6
+streamlit==1.45.1
+requests==2.32.3
